@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sally Student's Resume</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="application-root"></div>
+
+<script
+  src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+<script
+src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+<script type="text/babel">
+  function App(props) {
+    const divStyle = {
+      fontFamily: 'Lato',
+      margin: '10px 20px 10px 20px',
+    };
+    const titleStyle = {
+      color: 'blue'
+    };
+    const sectionStyle = {
+      backgroundColor: 'green',
+      color: 'black',
+      marginBottom: '20px',
+      padding: '10px 10px 10px 10px'
+    };
+
+
+
+    return (
+      <div style={divStyle}>
+        <header><h1 style={titleStyle}>Resume of <span>{props.children}</span></h1></header>
+        <section>
+          <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" width="200" alt="Photo of Sally Student" />
+          <address>
+          <p>Email:<a href="mailto:sally.s.student@gmail.com?subject=Hello">sally.student@gmail.com</a></p>
+          <p>Phone number: 000.000.0000</p>
+          </address>
+        </section>
+        <section style={sectionStyle}>
+          <header><h2 style={titleStyle}>Education</h2></header>
+          <ul>
+            <li>College fo Acting, 2020</li>
+          </ul>
+        </section>
+        <section style={sectionStyle}>
+          <header><h2 style={titleStyle}>Employment History</h2></header>
+          <div>
+            <h3 style={titleStyle}>Sykyline, 2020</h3>
+            <h4 style={titleStyle}>Brand Ambassdor</h4>
+            <ul>
+              <lh>Duties:</lh>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+              <li>Vitae congue mauris rhoncus aenean vel</li>
+              <li>Diam sollicitudin tempor id eu nisl nunc mi</li>
+              <li>Viverra maecenas accumsan lacus vel facilisis volutpat est</li>
+            </ul>
+          </div>
+   
+        </section>
+        <footer>© 2020 Sally A. Student</footer>
+      
+      </div>
+      );
+}
+
+ReactDOM.render(
+  <App className='my-class'>
+    <span>Sally Simmions</span>
+  </App>,
+  document.querySelector('#application-root')
+);
+</script>
+  
+</body>
+</html>
